@@ -1,0 +1,62 @@
+{
+  "cronologia": [
+    {
+      "id": 1,
+      "nombre": "Antigüedad",
+      "periodo": "Antes de 500 d.C.",
+      "descripcion": "Herramientas y armas primitivas en diferentes civilizaciones. Arco y flecha, lanzas, espadas de bronce."
+    },
+    {
+      "id": 2,
+      "nombre": "Edad Media",
+      "periodo": "500 - 1500 d.C.",
+      "descripcion": "Desarrollo de armaduras, espadas y sistemas de defensa medieval. Armas de fuego iniciales."
+    },
+    {
+      "id": 3,
+      "nombre": "Edad Moderna",
+      "periodo": "1500 - 1800 d.C.",
+      "descripcion": "Transición hacia armamento de fuego y tecnología renacentista. Mosquetes y cañones."
+    },
+    {
+      "id": 4,
+      "nombre": "Época Contemporánea",
+      "periodo": "1800 - Actualidad",
+      "descripcion": "Evolución tecnológica del armamento en contextos históricos modernos. Desarrollo industrial y tecnológico."
+    }
+  ],
+  "regiones": [
+    {
+      "id": "europa",
+      "nombre": "Europa",
+      "descripcion": "Historia armamentística europea desde la antigüedad: Imperio Romano, feudalismo, renacimiento y era moderna."
+    },
+    {
+      "id": "asia",
+      "nombre": "Asia",
+      "descripcion": "Tradiciones y evolución del armamento asiático: espadas japonesas, armamento chino, tradiciones de Medio Oriente."
+    },
+    {
+      "id": "america",
+      "nombre": "América",
+      "descripcion": "Contexto histórico del armamento en las Américas: civilizaciones precolombinas y desarrollo posterior."
+    },
+    {
+      "id": "africa",
+      "nombre": "Oriente Medio y África",
+      "descripcion": "Patrimonio histórico armamentístico de estas regiones: escudos, lanzas y tradiciones guerreras."
+    }
+  ],
+  "acerca_de": {
+    "titulo": "Acerca de Este Proyecto",
+    "descripcion": "Atlas Histórico del Armamento es una plataforma educativa diseñada para presentar información sobre la evolución del armamento desde una perspectiva histórica, cultural, museográfica y académica.",
+    "objetivo": "Nuestro enfoque es exclusivamente documental y educativo, orientado a estudiantes, investigadores, educadores y personas interesadas en la historia. No proporcionamos instrucciones operativas ni contenido que comprometa la seguridad."
+  },
+  "metadata": {
+    "titulo_app": "Atlas Histórico del Armamento",
+    "version": "1.0.0",
+    "año": 2026,
+    "autor": "ErikaGarcia-QE",
+    "licencia": "GNU General Public License v3.0"
+  }
+}

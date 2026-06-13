@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atlas Histórico del Armamento - Plataforma educativa y documental sobre la evolución del armamento a través de la historia">
+    <meta name="keywords" content="historia, armamento, educación, arqueología, museo, patrimonio histórico">
+    <meta name="author" content="ErikaGarcia-QE">
+    <title>{% block title %}{{ titulo_app }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">{{ titulo_app }}</h1>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#cronologia" class="nav-link">Cronología</a></li>
+                    <li><a href="#regiones" class="nav-link">Regiones</a></li>
+                    <li><a href="#acerca-de" class="nav-link">Acerca de</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        {% block content %}
+        <!-- Contenido específico de cada página -->
+        {% endblock %}
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; {{ año_actual }} {{ titulo_app }}. Proyecto educativo dedicado a la preservación y difusión del conocimiento histórico.</p>
+            <p>Versión {{ version }} | Para más información, consulta el <a href="https://github.com/ErikaGarcia-QE/World-Arms-Atlas">repositorio en GitHub</a>.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

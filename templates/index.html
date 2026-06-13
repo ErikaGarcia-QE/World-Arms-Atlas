@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo_app }} - Inicio{% endblock %}
+
+{% block content %}
+
+        <!-- Sección Principal -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Explora la Evolución del Armamento en la Historia</h2>
+                <p>Una plataforma educativa y documental dedicada al estudio histórico, cultural y académico del armamento a través de los tiempos.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Cronología -->
+        <section id="cronologia" class="timeline-section">
+            <div class="container">
+                <h2>Cronología Histórica</h2>
+                <div class="timeline" id="timeline-container">
+                    {% if datos.cronologia %}
+                        {% for periodo in datos.cronologia %}
+                        <div class="timeline-item">
+                            <h3>{{ periodo.nombre }}</h3>
+                            <p>{{ periodo.descripcion }}</p>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="timeline-item">
+                            <h3>Antigüedad</h3>
+                            <p>Herramientas y armas primitivas en diferentes civilizaciones.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Edad Media</h3>
+                            <p>Desarrollo de armaduras, espadas y sistemas de defensa medieval.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Edad Moderna</h3>
+                            <p>Transición hacia armamento de fuego y tecnología renacentista.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Época Contemporánea</h3>
+                            <p>Evolución tecnológica del armamento en contextos históricos modernos.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Regiones -->
+        <section id="regiones" class="regions-section">
+            <div class="container">
+                <h2>Clasificación Geográfica</h2>
+                <div class="regions-grid" id="regions-container">
+                    {% if datos.regiones %}
+                        {% for region in datos.regiones %}
+                        <div class="region-card" data-region="{{ region.id }}">
+                            <h3>{{ region.nombre }}</h3>
+                            <p>{{ region.descripcion }}</p>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="region-card">
+                            <h3>Europa</h3>
+                            <p>Historia armamentística europeo desde la antigüedad.</p>
+                        </div>
+                        <div class="region-card">
+                            <h3>Asia</h3>
+                            <p>Tradiciones y evolución del armamento asiático.</p>
+                        </div>
+                        <div class="region-card">
+                            <h3>América</h3>
+                            <p>Contexto histórico del armamento en las Américas.</p>
+                        </div>
+                        <div class="region-card">
+                            <h3>Oriente Medio y África</h3>
+                            <p>Patrimonio histórico armamentístico de estas regiones.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Acerca De -->
+        <section id="acerca-de" class="about-section">
+            <div class="container">
+                <h2>Acerca de Este Proyecto</h2>
+                {% if datos.acerca_de %}
+                    <p>{{ datos.acerca_de.descripcion }}</p>
+                    <p>{{ datos.acerca_de.objetivo }}</p>
+                {% else %}
+                    <p>Atlas Histórico del Armamento es una plataforma educativa diseñada para presentar información sobre la evolución del armamento desde una perspectiva histórica, cultural, museográfica y académica.</p>
+                    <p>Nuestro enfoque es exclusivamente documental y educativo, orientado a estudiantes, investigadores, educadores y personas interesadas en la historia.</p>
+                {% endif %}
+            </div>
+        </section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Cargar datos dinámicos desde la API
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Página cargada exitosamente');
+        
+        // Ejemplo de llamada a API (comentado)
+        // fetch('/api/datos')
+        //     .then(response => response.json())
+        //     .then(data => console.log('Datos del servidor:', data))
+        //     .catch(error => console.error('Error al cargar datos:', error));
+    });
+</script>
+{% endblock %}
